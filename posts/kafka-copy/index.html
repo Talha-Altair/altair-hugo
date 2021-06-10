@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<title>Kafka | Talha-Altair</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.68.3" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://talha.github.io/css/index.css">
+<link rel="canonical" href="https://talha.github.io/posts/kafka-copy/">
+<link rel="alternate" type="application/rss+xml" href="" title="Talha-Altair">
+
+<header>
+  
+    <a href="https://talha.github.io/" class="title">Talha-Altair</a>
+  
+  
+</header>
+
+<article>
+  <header>
+    <h1>Kafka</h1>
+    <time datetime="2021-06-10T23:05:36&#43;05:30">June 10, 2021</time>
+  </header>
+  <h1 id="kafka-json-transfer">Kafka Json Transfer</h1>
+<p>A Simple App that instantiates a file data transfer
+between a local producer and a local consumer</p>
+<h2 id="running-tests">Running Tests</h2>
+<p>Install dependencies:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install -r requirements.txt
+</code></pre></div><h2 id="download-kafka-server-files">Download Kafka Server Files</h2>
+<p><a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a></p>
+<p>Change server.properties to localhost advertised listener</p>
+<h2 id="start-kafka-server">Start Kafka server:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ JMX_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">8004</span> bin/kafka-server-start.sh config/server.properties 
+</code></pre></div><h2 id="start-kafka-zookeeper">Start Kafka Zookeeper:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bin/zookeeper-server-start.sh config/zookeeper.properties
+</code></pre></div><h2 id="test-message-consumer">Test message consumer:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bin/kafka-console-consumer.sh --topic quickstart-events --bootstrap-server localhost:9092
+</code></pre></div><h2 id="test-message-producer">Test message producer:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092 
+</code></pre></div><h2 id="kafka-manager">Kafka Manager:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone git@github.com:yahoo/CMAK.git
+
+cd CMAK/target/universal/cmak-3.0.0.5 
+
+$ bin/cmak -Dconfig.file<span style="color:#f92672">=</span>conf/application.conf -Dhttp.port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
+</code></pre></div>
+</article>
+
+
+
+</html>
