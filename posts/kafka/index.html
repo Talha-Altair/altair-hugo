@@ -1,51 +1,181 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<title>Kafka | Talha-Altair</title>
-<meta charset="utf-8">
-<meta name="generator" content="Hugo 0.68.3" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://talha.github.io/css/index.css">
-<link rel="canonical" href="https://talha.github.io/posts/kafka/">
-<link rel="alternate" type="application/rss+xml" href="" title="Talha-Altair">
+<!doctype html>
+<html lang="en">
 
-<header>
-  
-    <a href="https://talha.github.io/" class="title">Talha-Altair</a>
-  
-  
-</header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Kafka - Hugo Tanka Theme Demo </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="" />
+    <meta property="og:site_name" content="Hugo Tanka Theme Demo" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://example.com/posts/kafka/" />
+    <meta property="og:title" content="Kafka" />
+    <meta property="og:image" content="https://example.com" />
+    <meta property="og:description" content="" />
 
-<article>
-  <header>
-    <h1>Kafka</h1>
-    <time datetime="2021-06-10T23:05:36&#43;05:30">June 10, 2021</time>
-  </header>
-  <h1 id="kafka-json-transfer">Kafka Json Transfer</h1>
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:title" content="Kafka" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://example.com" />
+
+    <link rel="canonical" href="https://example.com/posts/kafka/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://example.comcss/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github-gist.min.css" integrity="sha512-od7JLoOTxM8w/HSKGzP9Kexc20K9p/M2zxSWsd7H1e4Ctf+8SQFtCWEZnW5u6ul5ehSECa5QmOk9ju2nQMmlVA==" crossorigin="anonymous" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://example.com/images/favicon.png">
+
+    
+    <link href="https://example.com/index.xml" rel="alternate" type="application/rss+xml" title="Hugo Tanka Theme Demo" />
+    
+</head>
+
+<body>
+    
+    <div class="mt-xl header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="https://example.com">
+                    <h1 class="name">Hugo Tanka Theme</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <ul class="nav nav-primary">
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://example.com/">
+                        
+                        Home
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://example.com/about/">
+                        
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/Talha-Altair?tab=repositories">
+                        
+                        GitHub
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="https://example.com/index.xml">
+                        
+                        Subscribe
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <h1 class="mx-0 mx-md-4">Kafka</h1>
+                    <div class="markdown">
+                        
+    <h1 id="kafka-json-transfer">Kafka Json Transfer</h1>
 <p>A Simple App that instantiates a file data transfer
 between a local producer and a local consumer</p>
 <h2 id="running-tests">Running Tests</h2>
 <p>Install dependencies:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install -r requirements.txt
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install -r requirements.txt
 </code></pre></div><h2 id="download-kafka-server-files">Download Kafka Server Files</h2>
 <p><a href="https://kafka.apache.org/quickstart">https://kafka.apache.org/quickstart</a></p>
 <p>Change server.properties to localhost advertised listener</p>
 <h2 id="start-kafka-server">Start Kafka server:</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ JMX_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">8004</span> bin/kafka-server-start.sh config/server.properties 
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ JMX_PORT=8004 bin/kafka-server-start.sh config/server.properties 
 </code></pre></div><h2 id="start-kafka-zookeeper">Start Kafka Zookeeper:</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bin/zookeeper-server-start.sh config/zookeeper.properties
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bin/zookeeper-server-start.sh config/zookeeper.properties
 </code></pre></div><h2 id="test-message-consumer">Test message consumer:</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bin/kafka-console-consumer.sh --topic quickstart-events --bootstrap-server localhost:9092
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bin/kafka-console-consumer.sh --topic quickstart-events --bootstrap-server localhost:9092
 </code></pre></div><h2 id="test-message-producer">Test message producer:</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092 
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092 
 </code></pre></div><h2 id="kafka-manager">Kafka Manager:</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone git@github.com:yahoo/CMAK.git
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone git@github.com:yahoo/CMAK.git
 
 cd CMAK/target/universal/cmak-3.0.0.5 
 
-$ bin/cmak -Dconfig.file<span style="color:#f92672">=</span>conf/application.conf -Dhttp.port<span style="color:#f92672">=</span><span style="color:#ae81ff">8080</span>
+$ bin/cmak -Dconfig.file=conf/application.conf -Dhttp.port=8080
 </code></pre></div>
-</article>
 
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-8">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo=""
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js" defer></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js" defer></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/stan.min.js" defer></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.initHighlighting();
+            }, true);
+        </script>
+    
+
+    
+
+    
+    
+        
+<script src="https://example.com/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
 
 </html>
