@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Talha</title>
-    <link>https://talha-altair.github.io/altair.github.io/</link>
-    <description>Recent content on Talha</description>
+    <title>Talha Altair</title>
+    <link>/</link>
+    <description>Recent content on Talha Altair</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>en-us</language>
     <lastBuildDate>Thu, 10 Jun 2021 23:05:36 +0530</lastBuildDate>
     
-	<atom:link href="https://talha-altair.github.io/altair.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kafka</title>
-      <link>https://talha-altair.github.io/altair.github.io/posts/kafka-copy/</link>
+      <link>/posts/kafka/</link>
       <pubDate>Thu, 10 Jun 2021 23:05:36 +0530</pubDate>
       
-      <guid>https://talha-altair.github.io/altair.github.io/posts/kafka-copy/</guid>
-      <description>Kafka Json Transfer A Simple App that instantiates a file data transfer between a local producer and a local consumer
-Running Tests Install dependencies:
-$ pip install -r requirements.txt Download Kafka Server Files https://kafka.apache.org/quickstart
-Change server.properties to localhost advertised listener
-Start Kafka server: $ JMX_PORT=8004 bin/kafka-server-start.sh config/server.properties Start Kafka Zookeeper: $ bin/zookeeper-server-start.sh config/zookeeper.properties Test message consumer: $ bin/kafka-console-consumer.sh --topic quickstart-events --bootstrap-server localhost:9092 Test message producer: $ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092 Kafka Manager: git clone git@github.</description>
-    </item>
-    
-    <item>
-      <title>Kafka</title>
-      <link>https://talha-altair.github.io/altair.github.io/posts/kafka/</link>
-      <pubDate>Thu, 10 Jun 2021 23:05:36 +0530</pubDate>
-      
-      <guid>https://talha-altair.github.io/altair.github.io/posts/kafka/</guid>
+      <guid>/posts/kafka/</guid>
       <description>Kafka Json Transfer A Simple App that instantiates a file data transfer between a local producer and a local consumer
 Running Tests Install dependencies:
 $ pip install -r requirements.txt Download Kafka Server Files https://kafka.apache.org/quickstart
@@ -39,10 +26,10 @@ Start Kafka server: $ JMX_PORT=8004 bin/kafka-server-start.sh config/server.prop
     
     <item>
       <title>sample</title>
-      <link>https://talha-altair.github.io/altair.github.io/posts/sample-note/</link>
+      <link>/posts/sample-note/</link>
       <pubDate>Thu, 10 Jun 2021 23:05:36 +0530</pubDate>
       
-      <guid>https://talha-altair.github.io/altair.github.io/posts/sample-note/</guid>
+      <guid>/posts/sample-note/</guid>
       <description>sample-note
 Project Title A brief description of what this project does and who it&amp;rsquo;s for Screenshots asdawd
 Used By This project is used by the following companies:
